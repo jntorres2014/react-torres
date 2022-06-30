@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Jugadores from "./Jugadores";
+import Drag from "./Drag";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <header className="App-header" >JUGADORES DE CLUB API</header>
+        <Jugadores className="App-header" style={{ height: "100px" }}   />
+        <header className="App-header">Clubes</header>
+
+        <Drag style={{width: '15%', height: '100px'}} />
+        
+        {/* <Drag style={{width: '10%', height: '100px'}}/> */}
+
+{/* 
+      <Jugadores />
+      <Prueba/> */}
     </div>
+    
   );
 }
 

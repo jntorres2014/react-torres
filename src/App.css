@@ -12,10 +12,29 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+columnas {
+    width: 50;
+    height: 150;
+    margin: 6;
+    flex-direction: column;
+  }
 
+.lista-jugadores {
+    width: 100%;
+    display: grid;
+    grid-template: auto / 1fr;
+    gap: 4rem;
+  }
+.jugadores {
+    background: var(--color-secondary);
+    border-radius: 0.3rem;
+    box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.1);
+    display: grid;
+    animation: showCard 0.5s linear;
+  }
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +43,20 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img.circular {
+    max-width: 10%;
+    border-radius: 50%;
+    border:1px black dashed;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.8);
+}
+figcaption {
+  display:none; 
+  transition: all .5s;
+}
+/* Visible texto */
+figure:hover > figcaption {
+  display:block;
+  transition: all .5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
