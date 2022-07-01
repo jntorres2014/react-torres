@@ -19,28 +19,34 @@ useEffect (() =>{
 
 },[])
   return (
+ 
     <MDBCard>
-      <MDBRow >
+      <div className='App-header' style={{background:"blue"}}>
+        {clubs && clubs.Club.Nombre
+        // <img src={"http://laraveltorres.herokuapp.com/storage/"+ clubs.Club.Escudo} alt="No foto"/>
+        }
+      </div>
+      <MDBRow style={{background:"white"}}>
       { 
       !clubs ? 'CARGANDOOOO..':
-    
-        clubs.Jugadores.map((club,index) => (
+        clubs.Jugadores.map((jugador,index) => (
           <div key={index}>
-            
-        <div className='App'>
+          
+        <div>
+          
         <MDBCol >
             {/* https://i.pinimg.com/originals/d1/6e/65/d16e656b8d40f345d574cf3485ffeb00.jpg */}
 
-          <MDBCardImage src={club.Escudo} className='img-fluid circular'fluid />
+          <MDBCardImage src={jugador.Foto} className='img-fluid circular'fluid />
             <img src="https://www.teleadhesivo.com/es/img/as1af002-jpg/folder/products-listado-merchant/vinilos-decorativos-jugador-futbol.jpg" className='circular' />
         
           <MDBCardBody>
-            <MDBCardTitle>{club.Nombre}</MDBCardTitle>
+            <MDBCardTitle>{jugador.Nombre}</MDBCardTitle>
             <MDBCardText>
-                {club.Apellido}
+                {jugador.Apellido}
             </MDBCardText>
             <MDBCardText>
-              <small className='text-muted'>{club.Dni}</small>
+              <small className='text-muted'>{jugador.Dni}</small>
             </MDBCardText>
           </MDBCardBody>
         </MDBCol>

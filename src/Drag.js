@@ -24,9 +24,9 @@ useEffect (() =>{
       !clubs ? 'CARGANDOOOO..':
     
         clubs.map((club,index) => (
-        <div className="d-flex align-items-start bg-light mb-3" key={index}>
+        <div style={{background:"inherit"}} key={index}>
               <MDBRow >
-                <div className='App'>
+                <div >
                   <MDBCol>
                   <MDBCardImage src="https://i.pinimg.com/originals/d1/6e/65/d16e656b8d40f345d574cf3485ffeb00.jpg" className='img-fluid circular'fluid />
                   <MDBCardBody>
